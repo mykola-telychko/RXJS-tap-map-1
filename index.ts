@@ -4,9 +4,9 @@ import { tap, map } from 'rxjs/operators';
 // https://www.learnrxjs.io/learn-rxjs/operators/utility/do
 // Example 1: Logging with tap
 
-const source = of(1, 2, 3, 4, 5);
+const src$ = of(1, 2, 3, 4, 5);
 //transparently log values from source with 'do'
-const example = source.pipe(
+const example = src$.pipe(
   tap((val) => console.log(`BEFORE MAP: ${val}`)),
   map((val) => val + 10),
   tap((val) => console.log(`AFTER MAP: ${val}`))
